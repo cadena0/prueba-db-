@@ -61,25 +61,26 @@ Used to securely manage database credentials and configuration.
 
 ```
 project-root/
-│
+│── data/
+│   ├── codigo_sql.sql
+│   └── data.csv
 ├── src/
 │   ├── config/
+│   │   ├── env.js
 │   │   ├── mongo.js
 │   │   └── postgres.js
 │   │
 │   ├── models/
-│   │   └── model.js
-│   │
+│   │   ├── customerSchema.js
+│   │   └── customerSchema.js
 │   ├── services/
 │   │   └── migrationService.js
 │   │
 │   ├── routes/
-│   │   └── routes.js
+│   │   └── migrates.js
 │   │
 │   └── server.js
 │
-├── data/
-│   └── data.csv
 │
 ├── package.json
 └── README.md
@@ -154,13 +155,11 @@ To start the server in development mode, run:
 ```
 npm run dev
 ```
+Start the project in Postgres
 
-The application will start on the port defined in your `.env` file.
-
-Example output:
 
 ```
-Server running on http://localhost:3000
+postgresql://<usuario>:<contraseña>@localhost:5432/megastoreglobal
 ```
 
 ---
