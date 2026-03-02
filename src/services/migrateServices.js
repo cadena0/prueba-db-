@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS "category" (
     
         await client.query(`
             CREATE TABLE IF NOT EXISTS "product" (
-	"id" VARCHAR(30) NOT NULL UNIQUE,
+	"id" VARCHAR(30) NOT NULL,
 	"name" VARCHAR(100) NOT NULL,
 	"price" INTEGER NOT NULL,
 	"category_id" INTEGER NOT NULL,
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS "category" (
     
         await client.query(`
             CREATE TABLE IF NOT EXISTS "order" (
-	"id" VARCHAR(30) NOT NULL UNIQUE,
+	"id" VARCHAR(30) NOT NULL,
 	"date" DATE,
 	PRIMARY KEY("id")
 );
@@ -107,12 +107,13 @@ ALTER TABLE "transaction"
 ADD FOREIGN KEY("order_id") REFERENCES "order"("id")
 ON UPDATE cascade ON DELETE cascade;
 
-ALTER TABLE "transaction"
-ADD CONSTRAINT "unique_product_order" UNIQUE ("product_id", "order_id");
+
 `);
 
     
         await client.query('COMMIT');
+
+        
     } catch (error) {
         await client.query('ROLLBACK');
         throw error;

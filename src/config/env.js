@@ -6,7 +6,7 @@ const _dirname = dirname(fileURLToPath(import.meta.url))
 
 config({ path: resolve(_dirname, '../../.env') });
 
-const required = ["MONGO_URI", "POSTGRES_URI"];
+const required = ["POSTGRES_URI"];
 
 
 for (const key of required) {
