@@ -1,4 +1,4 @@
-Table cliente [headercolor: #175e7a] {
+Table cliente  {
 	id serial [ pk, not null, unique ]
 	nombre_cliente varchar [ not null ]
 	email_cliente varchar [ not null ]
@@ -11,7 +11,7 @@ Table cliente [headercolor: #175e7a] {
 	}
 }
 
-Table producto [headercolor: #175e7a] {
+Table producto{
 	id_transaccion serial [ pk, not null, unique ]
 	categoria_producto varchar [ not null ]
 	sku date [ not null ]
@@ -21,7 +21,7 @@ Table producto [headercolor: #175e7a] {
 	id_provedor integer
 }
 
-Table provedor [headercolor: #175e7a] {
+Table provedor  {
 	"id_provedor " integer [ pk, increment, not null, unique ]
 	nombre_provedor varchar [ not null ]
 	contacto_provedor integer

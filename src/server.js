@@ -4,7 +4,6 @@ import { connectMongoDB } from "./config/mongoDB.js";
 import { createTables } from "./config/postgres.js";
 
 
-//copiar y pegar 
 try {
     console.log('Conecting to MongoDB...');
     await connectMongoDB();

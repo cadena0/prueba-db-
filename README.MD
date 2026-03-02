@@ -23,7 +23,10 @@ The system follows an ETL process:
 - visual studio code
 - libreOffice Calc
 - postgreSQL
-
+- dotenv
+- csv-parser
+- pg
+- fs
 ---
 
 ## Dependencies
