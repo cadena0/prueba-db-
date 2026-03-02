@@ -2,7 +2,7 @@ import { env } from "./env.js";
 
 import pg from 'pg';
 
-import { queryData, queryTables } from "../services/migrateServides.js";
+import { queryData, queryTables } from "../services/migrateServices.js";
 
 const { Pool } = pg;
 

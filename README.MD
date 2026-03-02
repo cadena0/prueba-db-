@@ -112,7 +112,7 @@ MONGO_URI=mongodb://localhost:27017/your_database
 1. Clone the repository:
 
 ```
-git clone <repository-url>
+git clone https://github.com/cadena0/prueba-db-.git
 ```
 
 2. Navigate into the project folder:
@@ -124,7 +124,7 @@ cd project-folder
 3. Install dependencies:
 
 ```
-npm i express
+npm i express - mongoDB visual studio code libreOffice Calc postgreSQL dotenv csv-parser pg fs
 ```
 
 ---
@@ -135,7 +135,7 @@ Make sure your `package.json` contains the following script:
 
 ```
 "scripts": {
-  "dev": "nodemon src/server.js"
+  "dev": "node --watch ./src/server.js"
 }
 ```
 
@@ -197,7 +197,3 @@ POST /api/migrate
 Make sure both databases are active before starting the server.
 
 ---
-
-## License
-
-This project is intended for educational purposes.
